@@ -176,6 +176,37 @@ body {
   box-shadow: 0 1px 0 #0744c9;
 }
 
+.galerie {
+  padding: 1rem;
+}
+.galerie__images {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 1024px) {
+  .galerie__images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .galerie__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .galerie__images {
+    grid-template-columns: 1fr;
+  }
+}
+.galerie__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
 /* ////////////////////////////////  composants */
 /**
 /////////////////////////////// Compsant .recherche
