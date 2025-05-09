@@ -2,7 +2,7 @@
 /*
 Theme Name: thème-33w-été25
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Élodie Buczkowski
 Author URI: https://github.com/eddytuto
 Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
@@ -15,6 +15,21 @@ Text Domain: club-voyage
 /* Importation des  feuilles de style du thème */
 /* ============================================   variables */
 /* Base */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5.4795vw - 0.137rem, 5rem);
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, 1.5656vw + 0.5323rem, 2rem);
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.875rem, 1.2vw + 0.4rem, 1.5rem);
+}
+
 /* Layout */
 html {
   box-sizing: border-box;
@@ -33,7 +48,6 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -142,10 +156,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 30px;
+  padding: 15px;
+}
+.hero__contenu {
+  background-color: rgba(9, 31, 76, 0.667);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  max-width: 100%;
+  font-weight: 400;
 }
 .hero__description {
   margin-bottom: 20px;
+  max-width: 40ch;
 }
 .hero__bouton {
   align-items: center;
@@ -234,4 +257,49 @@ body {
 }
 .recherche__bouton {
   border-left: 1px solid #aaa;
+}
+
+.formulaire__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.formulaire .formulaire__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+}
+.formulaire label {
+  color: #007bff;
+  font-weight: bold;
+  text-align: center;
+}
+.formulaire input {
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+.formulaire .formulaire__bouton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.formulaire .formulaire__bouton:hover {
+  background-color: #0056b3;
 }/*# sourceMappingURL=style.css.map */

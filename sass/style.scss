@@ -1,7 +1,7 @@
 /*
 Theme Name: thème-33w-été25
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Élodie Buczkowski
 Author URI: https://github.com/eddytuto
 Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
@@ -19,7 +19,7 @@ Text Domain: club-voyage
 //@import "variable/couleurs";
 
 /* Base */
-//@import "base/titre";
+@import "base/h1";
 
 /* Layout */
 @import "layout/general";
@@ -30,5 +30,4 @@ Text Domain: club-voyage
 //@import "layout/entete";
 /* ////////////////////////////////  composants */
 @import "composants/recherche";
-//@import "composants/bouton";
-//@import "composants/menu";
+@import "composants/formulaire";

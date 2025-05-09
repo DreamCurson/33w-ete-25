@@ -50,16 +50,62 @@
     <section class="hero">
       <div class="hero__contenu">
         <h1 class="hero__titre">Club de voyage</h1>
-        <p class="hero__description">description</p>
+        <p class="hero__description">
+          Partez à la découverte de lieux extraordinaires où se mêlent plages
+          sauvages, montagnes majestueuses et villages authentiques.
+        </p>
         <p class="hero__description">info@cmaisonneuve.qc.ca</p>
         <p class="hero__description">3800, rue Sherbrooke, Montreal</p>
         <p class="hero__description">888-888-8888</p>
         <a href="" class="hero__bouton">S'inscrire</a>
       </div>
     </section>
-    <section class="formulaire"></section>
+    <section class="formulaire">
+      <div class="formulaire__section">
+        <form class="formulaire__form">
+          <label for="nom">Nom :</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Écrivez votre nom"
+            required
+          />
+
+          <label for="prenom">Prénom :</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            placeholder="Écrivez votre prénom"
+            required
+          />
+
+          <label for="courriel">Courriel :</label>
+          <input
+            type="email"
+            id="courriel"
+            name="courriel"
+            placeholder="Écrivez votre courriel"
+            required
+          />
+
+          <label for="telephone">Téléphone :</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            placeholder="Écrivez votre téléphone"
+            required
+          />
+
+          <button type="submit" class="formulaire__bouton">S'INSCRIRE</button>
+        </form>
+      </div>
+    </section>
+
     <section class="galerie">
-      <h3>Nos destinations favorites</h3>
+      <h2>Nos destinations favorites</h2>
       <div class="galerie__images">
         <img
           src="images/grid/beach-418742_640.jpg"
@@ -113,8 +159,7 @@
         />
       </div>
     </section>
-    <section class="populaire">fjfgj</section>
-    <footer class="piedpage">fjfjfg</footer>
+    <!-- <footer class="piedpage">fjfjfg</footer> -->
   </body>
   <script src="script/checkbox.js"></script>
 </html>
