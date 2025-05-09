@@ -27,7 +27,8 @@ html {
 }
 
 * {
-  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -53,14 +54,24 @@ body {
 
 .chk__menu:checked ~ .entete__nav {
   display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
 }
 .chk__menu:checked ~ .entete__nav .entete__menu {
+  margin-top: 20px;
   flex-direction: column;
+  width: 180px;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu-item a {
+  padding: 4px;
 }
 
 .entete {
-  background-color: blanchedalmond;
+  background-color: rgba(133, 185, 245, 0.742);
+  padding: 10px;
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -75,7 +86,7 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0 2rem 0 auto;
+  margin: 0 1rem 0 auto;
 }
 @media screen and (max-width: 600px) {
   .entete__nav {
@@ -89,8 +100,8 @@ body {
   .entete__burger {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4%;
+    right: 1%;
   }
 }
 .entete__menu {
@@ -98,12 +109,28 @@ body {
   list-style-type: none;
   gap: 1rem;
 }
+@media screen and (min-width: 600px) {
+  .entete__menu {
+    align-items: center;
+  }
+}
 .entete__menu-item a {
+  text-decoration: none;
   display: block;
-  background-color: beige;
+  padding: 2px 4px;
+  color: #0744c9;
+  background-color: rgba(133, 185, 245, 0.532);
+  box-shadow: 0 2px 0 rgba(16, 50, 129, 0.2);
+  transition: all 150ms ease-in-out;
 }
 .entete__menu-item a:hover {
-  background-color: rgb(233, 227, 177);
+  background-color: rgba(65, 144, 235, 0.582);
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.entete__menu-item a:active {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 rgba(0, 0, 0, 0.1);
 }
 
 .hero {
@@ -115,19 +142,64 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 30px;
 }
+.hero__description {
+  margin-bottom: 20px;
+}
+.hero__bouton {
+  align-items: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 3px solid #0744c9;
+  border-radius: 0.375em;
+  color: #040404;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 4px 0 #0744c9;
+}
+.hero__bouton:hover {
+  background-color: rgb(238, 238, 253);
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #0744c9;
+}
+.hero__bouton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0744c9;
+}
+
 /* ////////////////////////////////  composants */
 /**
 /////////////////////////////// Compsant .recherche
 */
 .recherche {
-  border: 1px solid #aaa;
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 600px) {
+  .recherche {
+    margin: 1rem 0 0 0;
+    justify-content: center;
+  }
+}
 .recherche__input {
-  border: none;
+  border: 1px solid #aaa;
+  padding: 5px 3px;
   outline: none;
+  margin-right: 5px;
+}
+@media screen and (min-width: 600px) {
+  .recherche__input {
+    margin-left: 15px;
+  }
 }
 .recherche__bouton {
   border-left: 1px solid #aaa;

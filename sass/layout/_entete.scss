@@ -5,14 +5,24 @@
 }
 .chk__menu:checked ~ .entete__nav {
   display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
   .entete__menu {
+    margin-top: 20px;
     flex-direction: column;
+    width: 180px;
+  }
+  .entete__menu-item a {
+    padding: 4px;
   }
 }
 
 .entete {
-  background-color: blanchedalmond;
+  background-color: rgba(133, 185, 245, 0.742);
+  padding: 10px;
   &__contenu {
     display: flex;
     justify-content: space-between;
@@ -26,7 +36,7 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin: 0 2rem 0 auto;
+    margin: 0 1rem 0 auto;
     @media screen and (max-width: $point-rupture) {
       display: none;
     }
@@ -36,8 +46,8 @@
     @media screen and (max-width: $point-rupture) {
       display: block;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 4%;
+      right: 1%;
     }
   }
   &__menu {
@@ -45,15 +55,31 @@
     display: flex;
     list-style-type: none;
     gap: 1rem;
+    @media screen and (min-width: $point-rupture) {
+      align-items: center;
+    }
   }
   &__menu-item {
     //li
 
     a {
+      text-decoration: none;
       display: block;
-      background-color: beige;
+      padding: 2px 4px;
+      color: #0744c9;
+      background-color: rgba(133, 185, 245, 0.532);
+      box-shadow: 0 2px 0 rgba(16, 50, 129, 0.2);
+      transition: all 150ms ease-in-out;
+
       &:hover {
-        background-color: rgb(233, 227, 177);
+        background-color: rgba(65, 144, 235, 0.582);
+        transform: translateY(1px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(2px);
+        box-shadow: 0 0px 0 rgba(0, 0, 0, 0.1);
       }
     }
   }

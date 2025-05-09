@@ -2,12 +2,21 @@
 /////////////////////////////// Compsant .recherche
 */
 .recherche {
-  border: 1px solid #aaa;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: $point-rupture) {
+    margin: 1rem 0 0 0;
+    justify-content: center;
+  }
   &__input {
-    border: none;
+    border: 1px solid #aaa;
+    padding: 5px 3px;
     outline: none;
+    margin-right: 5px;
+    @media screen and (min-width: $point-rupture) {
+      margin-left: 15px;
+    }
   }
   &__bouton {
     border-left: 1px solid #aaa;
