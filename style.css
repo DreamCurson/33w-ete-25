@@ -201,6 +201,7 @@ body {
 
 .galerie {
   padding: 1rem;
+  margin-top: 1rem;
 }
 .galerie__images {
   display: grid;
@@ -259,13 +260,16 @@ body {
   border-left: 1px solid #aaa;
 }
 
+.formulaire {
+  margin-top: 2rem;
+}
 .formulaire__form {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
   padding: 20px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(235, 240, 255);
   border-top: 5px solid rgba(203, 203, 203, 0.377);
   border-bottom: 5px solid rgba(203, 203, 203, 0.169);
 }
@@ -277,13 +281,13 @@ body {
   flex-wrap: nowrap;
 }
 .formulaire__label {
-  color: #007bff;
+  color: #0744c9;
   font-weight: bold;
   white-space: nowrap;
 }
 .formulaire__input {
   padding: 5px;
-  border: 2px solid #007bff;
+  border: 2px solid #0744c9;
   border-radius: 8px;
   outline: none;
   font-size: 16px;
@@ -291,7 +295,7 @@ body {
 }
 .formulaire__bouton {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0744c9;
   color: white;
   border: none;
   border-radius: 8px;
@@ -300,5 +304,5 @@ body {
   transition: background-color 0.3s ease;
 }
 .formulaire__bouton:hover {
-  background-color: #0056b3;
+  background-color: #003f83;
 }/*# sourceMappingURL=style.css.map */

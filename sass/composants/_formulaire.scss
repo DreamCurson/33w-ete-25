@@ -1,11 +1,12 @@
 .formulaire {
+  margin-top: 2rem;
   &__form {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     padding: 20px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(235, 240, 255);
     border-top: 5px solid rgba(203, 203, 203, 0.377);
     border-bottom: 5px solid rgba(203, 203, 203, 0.169);
   }
@@ -19,14 +20,14 @@
   }
 
   &__label {
-    color: #007bff;
+    color: #0744c9;
     font-weight: bold;
     white-space: nowrap;
   }
 
   &__input {
     padding: 5px;
-    border: 2px solid #007bff;
+    border: 2px solid #0744c9;
     border-radius: 8px;
     outline: none;
     font-size: 16px;
@@ -35,7 +36,7 @@
 
   &__bouton {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0744c9;
     color: white;
     border: none;
     border-radius: 8px;
@@ -44,7 +45,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #003f83;
     }
   }
 }
