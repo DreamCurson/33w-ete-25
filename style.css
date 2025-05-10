@@ -259,38 +259,37 @@ body {
   border-left: 1px solid #aaa;
 }
 
-.formulaire__section {
+.formulaire__form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-.formulaire .formulaire__form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 15px;
-  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(236, 236, 236);
+  border-top: 5px solid rgba(203, 203, 203, 0.377);
+  border-bottom: 5px solid rgba(203, 203, 203, 0.169);
 }
-.formulaire label {
+.formulaire__field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.formulaire__label {
   color: #007bff;
   font-weight: bold;
-  text-align: center;
+  white-space: nowrap;
 }
-.formulaire input {
-  padding: 10px;
+.formulaire__input {
+  padding: 5px;
   border: 2px solid #007bff;
   border-radius: 8px;
   outline: none;
   font-size: 16px;
+  width: 22ch;
 }
-.formulaire .formulaire__bouton {
+.formulaire__bouton {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -300,6 +299,6 @@ body {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
-.formulaire .formulaire__bouton:hover {
+.formulaire__bouton:hover {
   background-color: #0056b3;
 }/*# sourceMappingURL=style.css.map */
