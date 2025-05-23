@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/*
+Theme Name: thème-33w-été25
+Theme URI: https://referenced.ca
+Author: Élodie Buczkowski
+Author URI: https://github.com/eddytuto
+Description: Thème de base développer dans le cadre du cours de Worpress
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: club-voyage
+*/
+/* Importation des  feuilles de style du thème */
+/* ============================================   variables */
+/* Base */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5.4795vw - 0.137rem, 5rem);
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, 1.5656vw + 0.5323rem, 2rem);
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.875rem, 1.2vw + 0.4rem, 1.5rem);
+}
+
+/* Layout */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.global {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ///////////////////////////// Layout .entete */
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  margin-top: 20px;
+  flex-direction: column;
+  width: 180px;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu-item a {
+  padding: 4px;
+}
+
+.entete {
+  background-color: rgba(133, 185, 245, 0.742);
+  padding: 10px;
+  /*  /////////////////////// Navigation */
+}
+.entete__contenu {
+  display: flex;
+  justify-content: space-between;
+}
+.entete__logo {
+  width: 75px;
+  height: 75px;
+}
+.entete__nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0 1rem 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .entete__nav {
+    display: none;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 4%;
+    right: 1%;
+  }
+}
+.entete__menu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .entete__menu {
+    align-items: center;
+  }
+}
+.entete__menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 2px 4px;
+  color: #0744c9;
+  background-color: rgba(133, 185, 245, 0.532);
+  box-shadow: 0 2px 0 rgba(16, 50, 129, 0.2);
+  transition: all 150ms ease-in-out;
+}
+.entete__menu-item a:hover {
+  background-color: rgba(65, 144, 235, 0.582);
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.entete__menu-item a:active {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  background-image: url("images/acores.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+}
+.hero__contenu {
+  background-color: rgba(9, 31, 76, 0.667);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  max-width: 100%;
+  font-weight: 400;
+}
+.hero__description {
+  margin-bottom: 20px;
+  max-width: 40ch;
+}
+.hero__bouton {
+  align-items: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 3px solid #0744c9;
+  border-radius: 0.375em;
+  color: #040404;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 4px 0 #0744c9;
+}
+.hero__bouton:hover {
+  background-color: rgb(238, 238, 253);
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #0744c9;
+}
+.hero__bouton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0744c9;
+}
+
+.galerie {
+  padding: 1rem;
+}
+.galerie__images {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 1024px) {
+  .galerie__images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .galerie__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .galerie__images {
+    grid-template-columns: 1fr;
+  }
+}
+.galerie__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.populaire {
+  padding: 20px;
+}
+.populaire__article {
+  margin-bottom: 2rem;
+}
+
+/* ////////////////////////////////  composants */
+/**
+/////////////////////////////// Compsant .recherche
+*/
+.recherche {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .recherche {
+    margin: 1rem 0 0 0;
+    justify-content: center;
+  }
+}
+.recherche__input {
+  border: 1px solid #aaa;
+  padding: 5px 3px;
+  outline: none;
+  margin-right: 5px;
+}
+@media screen and (min-width: 600px) {
+  .recherche__input {
+    margin-left: 15px;
+  }
+}
+.recherche__bouton {
+  border-left: 1px solid #aaa;
+}
+
+.formulaire {
+  margin-top: 2rem;
+}
+.formulaire__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(235, 240, 255);
+  border-top: 5px solid rgba(203, 203, 203, 0.377);
+  border-bottom: 5px solid rgba(203, 203, 203, 0.169);
+}
+.formulaire__field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.formulaire__label {
+  color: #0744c9;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.formulaire__input {
+  padding: 5px;
+  border: 2px solid #0744c9;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  width: 22ch;
+}
+.formulaire__bouton {
+  padding: 10px 20px;
+  background-color: #0744c9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.formulaire__bouton:hover {
+  background-color: #003f83;
+} /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+.formulaire {
+  margin-top: 2rem;
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(235, 240, 255);
+    border-top: 5px solid rgba(203, 203, 203, 0.377);
+    border-bottom: 5px solid rgba(203, 203, 203, 0.169);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  &__label {
+    color: #0744c9;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  &__input {
+    padding: 5px;
+    border: 2px solid #0744c9;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    width: 22ch;
+  }
+
+  &__bouton {
+    padding: 10px 20px;
+    background-color: #0744c9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #003f83;
+    }
+  }
+}
