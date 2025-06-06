@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="style.css" />
 <?php get_header(); ?>
-<h2>index.php</h2>
+<h2>Oh non, voici une erreur 404</h2>
 
  <section class="galerie">
-  <h3>Nos destinations favorites</h3>
+  <h3>Voici des destinations qu'on adore :</h3>
   <div class="galerie__images">
     <img src="<?php echo get_template_directory_uri(); ?>/images/grid/beach-418742_640.jpg" alt="" class="galerie__image" />
     <img src="<?php echo get_template_directory_uri(); ?>/images/grid/desert-4428269_640.jpg" alt="" class="galerie__image" />

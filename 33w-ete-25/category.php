@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style.css" />
 <?php get_header(); ?>
-<h2>index.php</h2>
+<h2>category.php</h2>
 
  <section class="galerie">
   <h3>Nos destinations favorites</h3>
