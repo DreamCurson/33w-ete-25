@@ -179,9 +179,7 @@ body {
   color: #040404;
   cursor: pointer;
   display: inline-flex;
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   height: 2.5em;
   justify-content: center;
@@ -233,10 +231,54 @@ body {
 }
 
 .populaire {
-  padding: 20px;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 2rem;
+  background: #e0f2ff;
+  margin-bottom: 2rem;
 }
 .populaire__article {
-  margin-bottom: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #b3d9ff;
+}
+.populaire__article:hover {
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+}
+.populaire__thumbnail {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.populaire__thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.populaire h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #005f99;
+}
+.populaire__texte {
+  font-size: 0.95rem;
+  color: #333;
+}
+.populaire__texte a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.populaire__texte a:hover {
+  text-decoration: underline;
+}
+
+.piedpage {
+  text-align: center;
 }
 
 /* ////////////////////////////////  composants */
@@ -313,4 +355,4 @@ body {
 }
 .formulaire__bouton:hover {
   background-color: #003f83;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
