@@ -33,6 +33,7 @@
           <?php wp_nav_menu(array(
             'menu'         => 'principal',
             'menu_class'   => 'entete__menu',
+            'container'      => false,
             'depth'        => 1,
             'fallback_cb'  => false,
             'add_li_class'    => 'entete__menu-item'
