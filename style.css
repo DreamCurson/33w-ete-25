@@ -103,7 +103,7 @@ body {
   flex-wrap: wrap;
   margin: 0 1rem 0 auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 654px) {
   .entete__nav {
     display: none;
   }
@@ -111,7 +111,7 @@ body {
 .entete__burger {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 654px) {
   .entete__burger {
     display: block;
     position: absolute;
@@ -124,7 +124,7 @@ body {
   list-style-type: none;
   gap: 1rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 654px) {
   .entete__menu {
     align-items: center;
   }
@@ -369,7 +369,7 @@ body {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 654px) {
   .recherche {
     margin: 1rem 0 0 0;
     justify-content: center;
@@ -381,7 +381,7 @@ body {
   outline: none;
   margin-right: 5px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 654px) {
   .recherche__input {
     margin-left: 15px;
   }
@@ -435,4 +435,9 @@ body {
 }
 .formulaire__bouton:hover {
   background-color: #003f83;
+}
+
+.sociaux img {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */

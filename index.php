@@ -4,7 +4,7 @@
 <section class="populaire">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article class="populaire__article">
-        <div class="populaire__thumbnail"><?php the_post_thumbnail('custom-maxheight'); ?></div>
+        <div class="populaire__thumbnail"><?php the_post_thumbnail('custom-wide'); ?></div>
         <h2><?php the_title(); ?></h2>
         <div class="populaire__texte"><?php 
             echo wp_strip_all_tags(get_the_content());
