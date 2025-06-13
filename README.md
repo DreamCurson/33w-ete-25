@@ -1,3 +1,9 @@
-## TP1 - Étape 3
+# TP1 - Site de voyage
 
-Auteur : Élodie Buczkowski
+### Première étape du développement d'un thème WP
+
+#### Auteur : Élodie Buczkowski
+
+#### Adresse de la github-page
+
+https://dreamcurson.github.io/33w-ete-25/

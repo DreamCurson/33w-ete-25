@@ -30,33 +30,22 @@
         
         <input type="checkbox" class="chk__menu" id="chk__menu" />
         <nav class="entete__nav">
-          <!-- <ul class="entete__menu">
-            <li class="entete__menu-item"><a href="#">Aventure</a></li>
-            <li class="entete__menu-item"><a href="#">Culturel</a></li>
-            <li class="entete__menu-item"><a href="#">Zen</a></li>
-            <li class="entete__menu-item"><a href="#">Sport</a></li>
-            <li class="entete__menu-item"><a href="#">Croisière</a></li>
-            <li class="entete__menu-item"><a href="#">Repos</a></li>
-          </ul> -->
-          
           <?php wp_nav_menu(array(
-              "menu"            => "principal",
-              'container'       => 'nav',
-              'container_class' => 'entete__nav',
-              'menu_class'      => 'entete__menu',
-              'depth'           => 1,
-              'fallback_cb'     => false,
-              'add_li_class'    => 'entete__menu-item'
-               
+            'menu'         => 'principal',
+            'menu_class'   => 'entete__menu',
+            'depth'        => 1,
+            'fallback_cb'  => false,
+            'add_li_class'    => 'entete__menu-item'
           )); ?>
 
           <form class="recherche" action="">
-            <input class="recherche__input" type="search" name="" id="" />
+            <input class="recherche__input" type="search" name="s" id="search" />
             <button class="recherche__bouton">
               <img
                 src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000"
                 width="20"
                 height="20"
+                alt="Rechercher"
               />
             </button>
           </form>
