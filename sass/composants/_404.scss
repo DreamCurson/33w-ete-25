@@ -1,0 +1,21 @@
+.erreur404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  border-radius: 20px;
+  background-color: #ebeef450;
+  box-shadow: 0 -4px 12px rgba(167, 207, 255, 0.7),
+    0 2px 12px rgba(167, 207, 255, 0.557);
+  box-sizing: border-box;
+
+  &__gif {
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+
+  &__texte {
+    color: #052978;
+    text-align: center;
+  }
+}
