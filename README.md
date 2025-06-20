@@ -1,6 +1,6 @@
-# TP1 - Site de voyage
+# TP2 - Site de voyage
 
-### Troisième étape du développement d'un thème WP
+### Première étape de l'étape 2 du TP wordpress
 
 #### Auteur : Élodie Buczkowski
 
