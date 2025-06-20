@@ -3,7 +3,11 @@
 <?php get_template_part('gabarit/formulaire'); ?>
 <?php get_template_part('gabarit/galerie'); ?>
  
-<?php get_template_part('gabarit/populaire'); ?>
+<section class="populaire">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php get_template_part('gabarit/populaire'); ?>
+    <?php endwhile; endif; ?>
+</section>
 
 <?php get_footer(); ?>
 </body>
