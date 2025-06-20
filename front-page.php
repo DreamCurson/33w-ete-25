@@ -1,17 +1,5 @@
     <?php get_header(); ?>
-    <section class="hero">
-      <div class="hero__contenu">
-        <h1 class="hero__titre">Club de voyage</h1>
-        <p class="hero__description">
-          Partez à la découverte de lieux extraordinaires où se mêlent plages
-          sauvages, montagnes majestueuses et villages authentiques.
-        </p>
-        <p class="hero__description">info@cmaisonneuve.qc.ca</p>
-        <p class="hero__description">3800, rue Sherbrooke, Montreal</p>
-        <p class="hero__description">888-888-8888</p>
-        <a href="" class="hero__bouton">S'inscrire</a>
-      </div>
-    </section>
+    <?php get_template_part('gabarit/hero'); ?>
     <section class="formulaire">
       <div class="formulaire__section">
         <form class="formulaire__form">
@@ -86,15 +74,8 @@
 
 
     <section class="populaire">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <article class="populaire__article">
-        <div class="populaire__thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
-        <h2><?php the_title(); ?></h2>
-        <div class="populaire__texte"><?php 
-            $lien ="<a href=" . get_permalink() . ">Suite...</a>";
-            echo wp_trim_words(get_the_excerpt(), 10, " " . $lien);
-        ?></div>
-    </article>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php get_template_part('gabarit/populaire'); ?>
     <?php endwhile; endif; ?>
     </section>
     <?php get_footer(); ?>
