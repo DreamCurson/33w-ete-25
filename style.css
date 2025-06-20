@@ -253,14 +253,12 @@ body {
   box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
 }
 .populaire__thumbnail {
-  width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 1rem;
   border: 3px solid #007acc;
 }
 .populaire__thumbnail img {
-  width: 100%;
   object-fit: cover;
   display: block;
 }

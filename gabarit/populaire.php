@@ -1,6 +1,6 @@
 <article class="populaire__article">
     <div class="populaire__thumbnail">
-        <?php the_post_thumbnail('thumbnail'); ?>
+        <?php the_post_thumbnail('custom-wide'); ?>
     </div>
     <h2><?php the_title(); ?></h2>
     <div class="populaire__texte">

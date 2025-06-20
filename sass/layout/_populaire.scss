@@ -23,14 +23,12 @@
   }
 
   &__thumbnail {
-    width: 100%;
     border-radius: 0.5rem;
     overflow: hidden;
     margin-bottom: 1rem;
     border: 3px solid #007acc;
 
     img {
-      width: 100%;
       object-fit: cover;
       display: block;
     }
