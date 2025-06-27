@@ -2,7 +2,8 @@
 
 function mon_theme_supports() {
     add_theme_support('post-thumbnails');
-    add_image_size('custom-wide', 345, 120, true);
+    add_image_size('custom-wide', 489, 120, true);
+    add_image_size('custom-large', 9999, 300, true);
     add_theme_support('title-tag');
     add_theme_support('menus');
     add_theme_support('custom-logo', array(
