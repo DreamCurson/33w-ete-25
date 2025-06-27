@@ -78,6 +78,20 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
     $hero_bouton_lien = get_theme_mod('hero_bouton', 'Default Title');
+
+    /* --- Background image --- */
+    $wp_customize->add_setting('hero_background_image', array(
+        'default' => get_template_directory_uri() . '/images/acores.jpg', 
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    // https://developer.wordpress.org/reference/classes/wp_customize_image_control/
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image', array(
+        'label' => __('Image de fond', 'theme_31w'),
+        'section' => 'hero_section',
+        'settings' => 'hero_background_image',
+    )));
+     $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri() );
 }
 
 add_action('customize_register', 'theme_31w_customize_register');

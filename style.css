@@ -150,7 +150,6 @@ body {
 }
 
 .hero {
-  background-image: url("images/acores.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -273,6 +272,25 @@ body {
   margin-bottom: 0.5rem;
   color: #005f99;
 }
+.populaire__temp {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.populaire__stars {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  background-color: #e0f2ff;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.populaire__star {
+  color: #adb2b5;
+  margin-right: 5px;
+}
+.populaire__filled {
+  color: #106eb1;
+}
 .populaire__texte {
   font-size: 0.95rem;
   color: #333;
@@ -283,9 +301,13 @@ body {
   color: #007acc;
   text-decoration: none;
   font-weight: bold;
+  margin-left: 3px;
 }
 .populaire__texte a:hover {
   text-decoration: underline;
+}
+.populaire__description {
+  margin-bottom: 10px;
 }
 
 .piedpage {

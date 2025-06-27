@@ -40,6 +40,26 @@
   }
 
   &__temp {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    background-color: #e0f2ff;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+
+  &__star {
+    color: #adb2b5;
+    margin-right: 5px;
+  }
+
+  &__filled {
+    color: #106eb1;
   }
 
   &__texte {
@@ -52,10 +72,15 @@
       color: #007acc;
       text-decoration: none;
       font-weight: bold;
+      margin-left: 3px;
 
       &:hover {
         text-decoration: underline;
       }
     }
+  }
+
+  &__description {
+    margin-bottom: 10px;
   }
 }
