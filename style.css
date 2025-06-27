@@ -87,6 +87,7 @@ body {
 .entete {
   background-color: rgba(133, 185, 245, 0.742);
   padding: 10px;
+  position: relative;
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -115,7 +116,7 @@ body {
   .entete__burger {
     display: block;
     position: absolute;
-    top: 4%;
+    margin-top: 22px;
     right: 1%;
   }
 }

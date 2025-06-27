@@ -26,9 +26,8 @@
             height="32"
           />
         </label>
-        
-        
         <input type="checkbox" class="chk__menu" id="chk__menu" />
+        
         <nav class="entete__nav">
           <?php wp_nav_menu(array(
             'menu'         => 'principal',

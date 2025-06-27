@@ -23,6 +23,7 @@
 .entete {
   background-color: rgba(133, 185, 245, 0.742);
   padding: 10px;
+  position: relative;
   &__contenu {
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,7 @@
     @media screen and (max-width: $point-rupture) {
       display: block;
       position: absolute;
-      top: 4%;
+      margin-top: 22px;
       right: 1%;
     }
   }
