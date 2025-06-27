@@ -1,5 +1,10 @@
 <?php 
   $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
+  $hero_email = get_theme_mod('hero_email', 'Default Title');
+  $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
+  $hero_telephone = get_theme_mod('hero_telephone', 'Default Title');
+  $hero_bouton = get_theme_mod('hero_bouton', 'Default Title');
+  $hero_bouton_lien = get_theme_mod('hero_bouton_lien', 'Default Title');
 ?>
 
 <section class="hero">
@@ -10,10 +15,10 @@
         <p class="hero__description">
           <?php bloginfo('description') ?>
         </p>
-        <p class="hero__description">info@cmaisonneuve.qc.ca</p>
-        <p class="hero__description">3800, rue Sherbrooke, Montreal</p>
-        <p class="hero__description">888-888-8888</p>
+        <p class="hero__description"><?= $hero_email ?></p>
+        <p class="hero__description"><?= $hero_adresse ?></p>
+        <p class="hero__description"><?= $hero_telephone ?></p>
         <p id="hero__auteur"><?= $hero_auteur ?></p>
-        <a href="" class="hero__bouton">S'inscrire</a>
+        <a href="<?= $hero_bouton_lien ?>" class="hero__bouton"><?= $hero_bouton ?></a>
       </div>
 </section>

@@ -1,7 +1,4 @@
 <?php
-/**
- * Configuration général du thème
- */
 
 function mon_theme_supports() {
     add_theme_support('post-thumbnails');
