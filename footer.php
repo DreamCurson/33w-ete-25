@@ -1,6 +1,10 @@
 <footer class="piedpage">
     <div>
-        <p class="piedpage__texte">© Élodie Buczkowski - 2025</p>
+        <div class="piedpage__textes">
+            <p class="piedpage__texte">© Élodie Buczkowski - 2025</p>
+            <p class="piedpage__texte">e2495224@cmaissoneuve.qc.ca</p>
+            <p class="piedpage__texte">888-888-8888</p>
+        </div>
         <div class="piedpage__reseau">
             <?php get_template_part('gabarit/icone'); ?>
         </div>
