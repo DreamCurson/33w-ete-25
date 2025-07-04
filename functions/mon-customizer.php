@@ -17,7 +17,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_email = get_theme_mod('hero_email', 'Default Title');
 
     /* --- Adresse --- */
     $wp_customize->add_setting('hero_adresse', array(
@@ -29,7 +28,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
 
     /* --- Telephone --- */
     $wp_customize->add_setting('hero_telephone', array(
@@ -41,7 +39,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_telephone = get_theme_mod('hero_telephone', 'Default Title');
 
     /* --- Auteur --- */
     $wp_customize->add_setting('hero_auteur', array(
@@ -53,7 +50,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
 
     /* --- Bouton contenu --- */
     $wp_customize->add_setting('hero_bouton', array(
@@ -65,7 +61,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_bouton = get_theme_mod('hero_bouton', 'Default Title');
 
     /* --- Bouton lien --- */
     $wp_customize->add_setting('hero_bouton_lien', array(
@@ -77,7 +72,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    $hero_bouton_lien = get_theme_mod('hero_bouton', 'Default Title');
 
     /* --- Background image --- */
     $wp_customize->add_setting('hero_background_image', array(
@@ -91,9 +85,18 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'settings' => 'hero_background_image',
     )));
-     $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri() );
+    $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri() );
 
-    /* --- Couleur d'arrière plan --- */
+    $wp_customize->add_setting('hero_couleur_texte', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_couleur_texte', array(
+        'label' => __('Couleur du texte', 'theme_31w'),
+        'section' => 'hero_section',
+    )));
+
 
 
     /* -------- Section Pied de page -------- */
@@ -112,7 +115,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'piedpage_section',
         'type' => 'text',
     ));
-    $piedpage_auteur = get_theme_mod('piedpage_auteur', 'Default Title');
     
     /* --- Email --- */
     $wp_customize->add_setting('piedpage_email', array(
@@ -124,7 +126,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'piedpage_section',
         'type' => 'text',
     ));
-    $piedpage_email = get_theme_mod('piedpage_email', 'Default Title');
 
     /* --- Numéro de téléphone --- */
     $wp_customize->add_setting('piedpage_phone', array(

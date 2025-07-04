@@ -6,7 +6,13 @@
   $hero_bouton = get_theme_mod('hero_bouton', 'Default Title');
   $hero_bouton_lien = get_theme_mod('hero_bouton_lien', 'Default Title');
   $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri());
+  $hero_couleur = get_theme_mod('hero_couleur_texte');
 ?>
+<style>
+  .hero__contenu {
+    color: <?= $hero_couleur ?>;
+  }
+</style>
 
 <!-- https://developer.wordpress.org/reference/functions/esc_url/ -->
 <section class="hero" style="background-image: url('<?php echo esc_url($hero_background_image); ?>');">            
