@@ -92,6 +92,53 @@ function theme_31w_customize_register($wp_customize) {
         'settings' => 'hero_background_image',
     )));
      $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri() );
+
+    /* --- Couleur d'arrière plan --- */
+
+
+    /* -------- Section Pied de page -------- */
+    $wp_customize->add_section('piedpage_section', array(
+        'title' => __('Section Footer', 'theme_31w'),
+        'priority' => 30,
+    ));
+ 
+    /* --- Auteur --- */
+    $wp_customize->add_setting('piedpage_auteur', array(
+        'default' => __('© Élodie Buczkowski - 2025', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('piedpage_auteur', array(
+        'label' => __('L\'auteur du site', 'theme_31w'),
+        'section' => 'piedpage_section',
+        'type' => 'text',
+    ));
+    $piedpage_auteur = get_theme_mod('piedpage_auteur', 'Default Title');
+    
+    /* --- Email --- */
+    $wp_customize->add_setting('piedpage_email', array(
+        'default' => __('e2495224@cmaissoneuve.qc.ca', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('piedpage_email', array(
+        'label' => __('L\'email du site', 'theme_31w'),
+        'section' => 'piedpage_section',
+        'type' => 'text',
+    ));
+    $piedpage_email = get_theme_mod('piedpage_email', 'Default Title');
+
+    /* --- Numéro de téléphone --- */
+    $wp_customize->add_setting('piedpage_phone', array(
+        'default' => __('888-888-8888', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('piedpage_phone', array(
+        'label' => __('Le numéro de téléphone', 'theme_31w'),
+        'section' => 'piedpage_section',
+        'type' => 'text',
+    ));
+    $piedpage_phone = get_theme_mod('piedpage_phone', 'Default Title');
+
+
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
