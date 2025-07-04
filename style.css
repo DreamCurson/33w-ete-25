@@ -14,6 +14,12 @@ Text Domain: club-voyage
 */
 /* Importation des  feuilles de style du thème */
 /* ============================================   variables */
+/* Animation */
+.hero__titre {
+  transform: translateY(-500px);
+  transition: transform 2s;
+}
+
 /* Base */
 h1 {
   font-family: "Montserrat", sans-serif;
