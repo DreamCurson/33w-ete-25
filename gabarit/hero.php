@@ -27,6 +27,9 @@
     <p class="hero__description"><?= $hero_adresse ?></p>
     <p class="hero__description"><?= $hero_telephone ?></p>
     <p id="hero__auteur"><?= $hero_auteur ?></p>
+    <div class="hero__description">
+      <?php get_template_part('gabarit/icone'); ?>
+    </div>
     <a href="<?= $hero_bouton_lien ?>" class="hero__bouton"><?= $hero_bouton ?></a>
   </div>
 </section>

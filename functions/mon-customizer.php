@@ -85,8 +85,8 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'hero_section',
         'settings' => 'hero_background_image',
     )));
-    $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri() );
 
+    /* --- Couleur Texte --- */
     $wp_customize->add_setting('hero_couleur_texte', array(
         'default' => '',
         'sanitize_callback' => 'sanitize_hex_color', 
@@ -96,8 +96,6 @@ function theme_31w_customize_register($wp_customize) {
         'label' => __('Couleur du texte', 'theme_31w'),
         'section' => 'hero_section',
     )));
-
-
 
     /* -------- Section Pied de page -------- */
     $wp_customize->add_section('piedpage_section', array(
@@ -139,6 +137,16 @@ function theme_31w_customize_register($wp_customize) {
     ));
     $piedpage_phone = get_theme_mod('piedpage_phone', 'Default Title');
 
+    /* --- Couleur Arrière plan --- */
+    $wp_customize->add_setting('piedpage_couleur_fond', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'piedpage_couleur_fond', array(
+        'label' => __('Couleur du fond', 'theme_31w'),
+        'section' => 'piedpage_section',
+    )));
 
 }
 
