@@ -5,7 +5,10 @@
   $hero_telephone = get_theme_mod('hero_telephone', 'Default Title');
   $hero_bouton = get_theme_mod('hero_bouton', 'Default Title');
   $hero_bouton_lien = get_theme_mod('hero_bouton_lien', 'Default Title');
-  $hero_background_image = get_theme_mod('hero_background_image', get_template_directory_uri());
+  $hero_background[0] = get_theme_mod('hero_background_image_0', get_template_directory_uri());
+  $hero_background[1] = get_theme_mod('hero_background_image_1', get_template_directory_uri());
+  $hero_background[2] = get_theme_mod('hero_background_image_2', get_template_directory_uri());
+
   $hero_couleur_texte = get_theme_mod('hero_couleur_texte');
   $hero_couleur_icone = get_theme_mod('hero_couleur_icone');
 ?>
@@ -16,7 +19,11 @@
 </style>
 
 <!-- https://developer.wordpress.org/reference/functions/esc_url/ -->
-<section class="hero" style="background-image: url('<?php echo esc_url($hero_background_image); ?>');">            
+<section class="hero">
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[0]); ?>'); opacity:1;"></div>
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[1]); ?>'); opacity:0;"></div>
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[2]); ?>'); opacity:0;"></div>
+
   <div class="hero__contenu">
     <h1 class="hero__titre">
       <?php echo bloginfo('name') ?>

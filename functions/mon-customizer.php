@@ -73,17 +73,40 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
 
-    /* --- Background image --- */
-    $wp_customize->add_setting('hero_background_image', array(
-        'default' => get_template_directory_uri() . '/images/acores.jpg', 
+    // --- Background image 0 ---
+    $wp_customize->add_setting('hero_background_image_0', array(
+        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
         'sanitize_callback' => 'esc_url_raw',
     ));
 
-    // https://developer.wordpress.org/reference/classes/wp_customize_image_control/
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image', array(
-        'label' => __('Image de fond', 'theme_31w'),
-        'section' => 'hero_section',
-        'settings' => 'hero_background_image',
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_0', array(
+        'label'    => __('Image de fond 0', 'theme_31w'),
+        'section'  => 'hero_section',
+        'settings' => 'hero_background_image_0',
+    )));
+
+    // --- Background image 1 ---
+    $wp_customize->add_setting('hero_background_image_1', array(
+        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_1', array(
+        'label'    => __('Image de fond 1', 'theme_31w'),
+        'section'  => 'hero_section',
+        'settings' => 'hero_background_image_1',
+    )));
+
+    // --- Background image 2 ---
+    $wp_customize->add_setting('hero_background_image_2', array(
+        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_2', array(
+        'label'    => __('Image de fond 2', 'theme_31w'),
+        'section'  => 'hero_section',
+        'settings' => 'hero_background_image_2',
     )));
 
     /* --- Couleur Texte --- */

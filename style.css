@@ -160,14 +160,12 @@ body {
 }
 
 .hero {
-  background-position: center;
-  background-size: cover;
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 15px;
   cursor: default;
 }
 .hero__contenu {
@@ -214,6 +212,14 @@ body {
 #hero__auteur {
   font-weight: 600;
   margin-bottom: 25px;
+}
+
+.carrousel {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .galerie {
