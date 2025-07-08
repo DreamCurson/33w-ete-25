@@ -20,17 +20,9 @@ $hero_background = [
     color: <?= $hero_couleur_texte ?>;
   }
 </style>
-<section class="hero">
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[0]); ?>');"></div>
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[1]); ?>');"></div>
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[2]); ?>');"></div>
-  
-  <form class="carrousel__form">
-  <input type="radio" name="carrousel__radio" class="carrousel__radio" checked>
-  <input type="radio" name="carrousel__radio" class="carrousel__radio">
-  <input type="radio" name="carrousel__radio" class="carrousel__radio">
-  </form>
 
+<section class="hero">
+  <?php afficher_carrousel($hero_background); ?>
 
   <div class="hero__contenu">
     <h1 class="hero__titre"><?php echo bloginfo('name') ?></h1>

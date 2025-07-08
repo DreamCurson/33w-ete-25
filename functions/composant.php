@@ -1,7 +1,6 @@
 <?php
 function icone_sociaux($couleur)
 {
-    // pour enle ver le # de la position 0 on extrait à partir de la position 1   
     $couleur = substr($couleur, 1);
 ?>
 
@@ -13,3 +12,30 @@ function icone_sociaux($couleur)
     </a>
 
 <?php } ?>
+
+<?php
+function afficher_erreur_404() {
+?>
+    <section class="erreur404">
+        <h2 class="erreur404__texte">Nous ne savons pas où vous êtes, mais vous êtes loin de la destination attendue...</h2>
+        <img class="erreur404__gif" src="<?php echo get_template_directory_uri(); ?>/images/404_island.gif" alt="" class="ile perdu" />
+    </section>
+<?php
+}
+?>
+
+<?php
+function afficher_carrousel($hero_background) {
+?>
+  <form class="carrousel__form">
+    <input type="radio" name="carrousel__radio" class="carrousel__radio" checked>
+    <input type="radio" name="carrousel__radio" class="carrousel__radio">
+    <input type="radio" name="carrousel__radio" class="carrousel__radio">
+  </form>
+
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[0]); ?>');"></div>
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[1]); ?>');"></div>
+  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[2]); ?>');"></div>
+<?php
+}
+?>
