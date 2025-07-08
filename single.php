@@ -9,4 +9,3 @@
 <?php get_template_part('gabarit/galerie'); ?>
 
 <?php get_footer(); ?>
-<script src="script/checkbox.js"></script>

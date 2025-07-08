@@ -49,17 +49,30 @@ function theme_tp_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
 function mon_theme_ajouter_scripts() {
-    $script_path = get_template_directory() . '/script/checkbox.js';
-    $script_url  = get_template_directory_uri() . '/script/checkbox.js';
+    $checkbox_script_path = get_template_directory() . '/script/checkbox.js';
+    $checkbox_script_url  = get_template_directory_uri() . '/script/checkbox.js';
+
+    $animation_script_path = get_template_directory() . '/script/animation-hero.js';
+    $animation_script_url  = get_template_directory_uri() . '/script/animation-hero.js';
 
     wp_enqueue_script(
-        'mon-script',
-        $script_url,
-        array(),
-        filemtime($script_path),
-        true
+        'mon-script-checkbox',    
+        $checkbox_script_url,                 
+        array(),                            
+        filemtime($checkbox_script_path),     
+        true                                   
+    );
+
+    wp_enqueue_script(
+        'mon-script-animation-hero',       
+        $animation_script_url,   
+        array(),                   
+        filemtime($animation_script_path),   
+        true                 
     );
 }
+
 add_action('wp_enqueue_scripts', 'mon_theme_ajouter_scripts');
+
 
 ?>
