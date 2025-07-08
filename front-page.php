@@ -12,4 +12,5 @@
 <?php get_footer(); ?>
 </body>
 
-<script src="script/checkbox.js"></script>
+<script src="wp-content\themes\33w-ete-25\script\checkbox.js"></script>
+<script src="wp-content\themes\33w-ete-25\script\animation-hero.js"></script>

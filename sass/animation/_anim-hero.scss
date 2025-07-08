@@ -2,3 +2,7 @@
   transform: translateY(-500px);
   transition: transform 2s;
 }
+
+.hero__titre.animate {
+  transform: translateY(0);
+}

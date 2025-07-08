@@ -19,7 +19,7 @@
 <section class="hero" style="background-image: url('<?php echo esc_url($hero_background_image); ?>');">            
   <div class="hero__contenu">
     <h1 class="hero__titre">
-      <?php bloginfo('name') ?>
+      <?php echo bloginfo('name') ?>
     </h1>
     <p class="hero__description">
       <?php bloginfo('description') ?>

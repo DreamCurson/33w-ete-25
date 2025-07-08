@@ -20,6 +20,10 @@ Text Domain: club-voyage
   transition: transform 2s;
 }
 
+.hero__titre.animate {
+  transform: translateY(0);
+}
+
 /* Base */
 h1 {
   font-family: "Montserrat", sans-serif;
