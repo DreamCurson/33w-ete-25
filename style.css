@@ -77,23 +77,24 @@ body {
   display: none;
 }
 
-.chk__menu:checked ~ .entete__nav {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+@media screen and (max-width: 654px) {
+  .chk__menu:checked ~ .entete__nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .chk__menu:checked ~ .entete__nav .entete__menu {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 180px;
+  }
+  .chk__menu:checked ~ .entete__nav .entete__menu-item a {
+    padding: 4px;
+  }
 }
-.chk__menu:checked ~ .entete__nav .entete__menu {
-  margin-top: 20px;
-  flex-direction: column;
-  width: 180px;
-}
-.chk__menu:checked ~ .entete__nav .entete__menu-item a {
-  padding: 4px;
-}
-
 .entete {
   background-color: rgba(133, 185, 245, 0.742);
   padding: 10px;
