@@ -357,6 +357,29 @@ body {
   margin-bottom: 10px;
 }
 
+.categorie__description {
+  background-color: rgba(246, 247, 253, 0.431372549);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.categorie__titre {
+  color: #005f99;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid #005f99;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.categorie__texte {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
 .piedpage {
   background-color: #e6f0ff;
   padding: 2rem 1rem;
