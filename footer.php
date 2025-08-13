@@ -22,5 +22,5 @@ $piedpage_couleur_icone = get_theme_mod('piedpage_couleur_icone');
         </div>
     </div>
     <?php get_template_part('partials/footer-header'); ?>
-    
+<?php wp_footer(); ?>    
 </footer>

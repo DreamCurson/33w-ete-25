@@ -205,7 +205,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'piedpage_section',
         'type' => 'text',
     ));
-    $piedpage_phone = get_theme_mod('piedpage_phone', 'Default Title');
 
     /* --- Couleur Arrière plan --- */
     $wp_customize->add_setting('piedpage_couleur_fond', array(

@@ -9,4 +9,3 @@
 </section>
  
 <?php get_footer(); ?>
-<script src="script/checkbox.js"></script>

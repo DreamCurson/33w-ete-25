@@ -57,34 +57,28 @@ function mon_theme_ajouter_scripts() {
 
     $carrousel_script_path = get_template_directory() . '/script/carrousel.js';
     $carrousel_script_url  = get_template_directory_uri() . '/script/carrousel.js';
-
-    wp_enqueue_script(
-        'mon-script-checkbox',    
-        $checkbox_script_url,                 
-        array(),
-        filemtime($checkbox_script_path),
-        true
-    );
-
-    wp_enqueue_script(
-        'mon-script-animation-hero',       
-        $animation_script_url,   
-        array(),                             
-        filemtime($animation_script_path),   
-        true                                  
-    );
-
-     wp_enqueue_script(
-        'mon-script-carrousel',    
-        $carrousel_script_url,                 
-        array(),
-        filemtime($carrousel_script_path),
-        true
-    );
-
     
+    $destination = get_template_directory() . '/script/destination.js';
+    $destination_url  = get_template_directory_uri() . '/script/destination.js';
+
+    wp_enqueue_script('destination', $destination_url, array(), filemtime($destination), true);
+
+    wp_enqueue_script('mon-script-checkbox', $checkbox_script_url, array(), filemtime($checkbox_script_path), true);
+
+    wp_enqueue_script('mon-script-animation-hero', $animation_script_url, array(), filemtime($animation_script_path), true);
+
+    wp_enqueue_script('mon-script-carrousel', $carrousel_script_url, array(), filemtime($carrousel_script_path), true);
 }
 add_action('wp_enqueue_scripts', 'mon_theme_ajouter_scripts');
 
 
+function modifie_requete_principal($query)
+{
+    if ($query->is_home() && $query->is_main_query() && ! is_admin()) {
+        $query->set('category_name', 'populaire');
+        $query->set('orderby', 'title');
+        $query->set('order', 'ASC');
+    }
+}
+add_action('pre_get_posts', 'modifie_requete_principal');
 ?>

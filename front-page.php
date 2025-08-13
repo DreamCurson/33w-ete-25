@@ -9,6 +9,12 @@
     <?php endwhile; endif; ?>
 </section>
 
+<section class="destination">
+  <?php extraire_list_categories("destination"); ?>
+  <h2 class="destination__titre">Articles de la catégorie</h2>
+  <div class="destination__list"></div>
+</section>
+
 <?php get_footer(); ?>
 </body>
 
