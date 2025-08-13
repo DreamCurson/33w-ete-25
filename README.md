@@ -1,6 +1,6 @@
 # TP2 - Site de voyage
 
-### Première étape de l'étape 2 du TP wordpress
+### Étape 2 du TP wordpress
 
 #### Auteur : Élodie Buczkowski
 
