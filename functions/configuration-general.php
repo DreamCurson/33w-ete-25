@@ -71,14 +71,4 @@ function mon_theme_ajouter_scripts() {
 }
 add_action('wp_enqueue_scripts', 'mon_theme_ajouter_scripts');
 
-
-function modifie_requete_principal($query)
-{
-    if ($query->is_home() && $query->is_main_query() && ! is_admin()) {
-        $query->set('category_name', 'populaire');
-        $query->set('orderby', 'title');
-        $query->set('order', 'ASC');
-    }
-}
-add_action('pre_get_posts', 'modifie_requete_principal');
 ?>

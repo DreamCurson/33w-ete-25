@@ -74,16 +74,37 @@ function afficher_appreciation_score() {
 function extraire_list_categories($nom_categorie)
 {
     $parent_category = get_category_by_slug($nom_categorie);
+    if (!$parent_category) {
+        return;
+    }
+
     $tableau = array(
         'parent' => $parent_category->term_id,
         'hide_empty' => true
     );
+
     $list_categories = get_categories($tableau);
-    echo "<ul class='list_categories'>";
-    foreach ($list_categories as $categorie) {
-        echo "<li data-id='" . $categorie->term_id . "'>" . $categorie->name . "</li>";
+
+    if (!empty($list_categories)) {
+        echo "<ul class='list_categories'>";
+        foreach ($list_categories as $categorie) {
+            echo "<li class='list__categorie' data-id='" . esc_attr($categorie->term_id) . "'>" . esc_html($categorie->name) . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "<p>No categories found.</p>";
     }
-    echo "</ul>";
 }
+
+function afficher_section_categorie($categorie) {
+    ?>
+    <section class="<?php echo esc_attr($categorie); ?>">
+        <?php extraire_list_categories($categorie); ?>
+        <div class="<?php echo esc_attr($categorie); ?>__list"></div>
+    </section>
+    <?php
+}
+
+
 
 ?>
