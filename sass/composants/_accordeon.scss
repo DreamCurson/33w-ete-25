@@ -11,3 +11,51 @@
 .accordeon__chk:checked ~ .accordeon__excerpt {
   max-height: 200px;
 }
+
+.accordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e0f2ff63;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.accordeon.open {
+  border-bottom: 2px solid #b5dcf8;
+}
+
+.accordeon h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #005f73;
+}
+
+.accordeon__excerpt {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 10px;
+  display: none;
+}
+
+.accordeon:hover {
+  background-color: #e0f2ff;
+  box-shadow: 0 4px 8px rgba(0, 95, 115, 0.1);
+}
+
+.accordeon__excerpt a {
+  color: #005f73;
+  text-decoration: none;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.accordeon__excerpt a:hover {
+  text-decoration: underline;
+}
+
+.accordeon__excerpt p {
+  padding: 20px;
+}

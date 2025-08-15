@@ -50,24 +50,24 @@ add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
 function mon_theme_ajouter_scripts() {
     $checkbox_script_path = get_template_directory() . '/script/checkbox.js';
-    $checkbox_script_url  = get_template_directory_uri() . '/script/checkbox.js';
+    $checkbox_script_url  = get_template_directory_uri() . '/script/checkbox.js'; 
+    wp_enqueue_script('mon-script-checkbox', $checkbox_script_url, array(), filemtime($checkbox_script_path), true);
 
     $animation_script_path = get_template_directory() . '/script/animation-hero.js';
     $animation_script_url  = get_template_directory_uri() . '/script/animation-hero.js';
+    wp_enqueue_script('mon-script-animation-hero', $animation_script_url, array(), filemtime($animation_script_path), true);
 
     $carrousel_script_path = get_template_directory() . '/script/carrousel.js';
     $carrousel_script_url  = get_template_directory_uri() . '/script/carrousel.js';
-    
+    wp_enqueue_script('mon-script-carrousel', $carrousel_script_url, array(), filemtime($carrousel_script_path), true);
+
     $destination = get_template_directory() . '/script/destination.js';
     $destination_url  = get_template_directory_uri() . '/script/destination.js';
-
     wp_enqueue_script('destination', $destination_url, array(), filemtime($destination), true);
 
-    wp_enqueue_script('mon-script-checkbox', $checkbox_script_url, array(), filemtime($checkbox_script_path), true);
-
-    wp_enqueue_script('mon-script-animation-hero', $animation_script_url, array(), filemtime($animation_script_path), true);
-
-    wp_enqueue_script('mon-script-carrousel', $carrousel_script_url, array(), filemtime($carrousel_script_path), true);
+    $accordeon = get_template_directory() . '/script/accordeon.js';
+    $accordeon_url = get_template_directory_uri() . '/script/accordeon.js';
+    wp_enqueue_script('mon-script-accordion', $accordeon_url, array(), filemtime($accordeon), true);
 }
 add_action('wp_enqueue_scripts', 'mon_theme_ajouter_scripts');
 
