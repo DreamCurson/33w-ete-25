@@ -73,41 +73,36 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
 
-    // --- Background image 0 ---
-    $wp_customize->add_setting('hero_background_image_0', array(
-        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
-        'sanitize_callback' => 'esc_url_raw',
+    // CARROUSEL 
+    $wp_customize->add_setting('hero_background_image_count', array(
+    'default'           => 3,
+    'sanitize_callback' => 'absint',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_0', array(
-        'label'    => __('Image de fond 0', 'theme_31w'),
-        'section'  => 'hero_section',
-        'settings' => 'hero_background_image_0',
-    )));
-
-    // --- Background image 1 ---
-    $wp_customize->add_setting('hero_background_image_1', array(
-        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
-        'sanitize_callback' => 'esc_url_raw',
+    $wp_customize->add_control('hero_background_image_count', array(
+        'label'   => __('Nombre d\'images de fond', 'theme_31w'),
+        'section' => 'hero_section',
+        'type'    => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 10,
+        ),
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_1', array(
-        'label'    => __('Image de fond 1', 'theme_31w'),
-        'section'  => 'hero_section',
-        'settings' => 'hero_background_image_1',
-    )));
+    $image_count = get_theme_mod('hero_background_image_count', 3); 
 
-    // --- Background image 2 ---
-    $wp_customize->add_setting('hero_background_image_2', array(
-        'default'           => get_template_directory_uri() . '/images/acores.jpg', 
-        'sanitize_callback' => 'esc_url_raw',
-    ));
+    for ($i = 0; $i < $image_count; $i++) {
+        $wp_customize->add_setting('hero_background_image_' . $i, array(
+            'default'           => get_template_directory_uri() . '/images/acores.jpg',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_2', array(
-        'label'    => __('Image de fond 2', 'theme_31w'),
-        'section'  => 'hero_section',
-        'settings' => 'hero_background_image_2',
-    )));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_image_' . $i, array(
+            'label'    => __('Image de fond ' . ($i+1), 'theme_31w'),
+            'section'  => 'hero_section',
+            'settings' => 'hero_background_image_' . $i,
+        )));
+    }
 
     /* --- Couleur Texte --- */
     $wp_customize->add_setting('hero_couleur_texte', array(

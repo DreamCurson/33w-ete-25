@@ -8,11 +8,13 @@ $hero_bouton_lien = get_theme_mod('hero_bouton_lien', 'Default Title');
 $hero_couleur_texte = get_theme_mod('hero_couleur_texte');
 $hero_couleur_icone = get_theme_mod('hero_couleur_icone');
 
-$hero_background = [
-    get_theme_mod('hero_background_image_0', get_template_directory_uri() . '/images/acores.jpg'),
-    get_theme_mod('hero_background_image_1', get_template_directory_uri() . '/images/acores.jpg'),
-    get_theme_mod('hero_background_image_2', get_template_directory_uri() . '/images/acores.jpg')
-];
+$image_count = get_theme_mod('hero_background_image_count', 3);
+$hero_background_images = [];
+
+for ($i = 0; $i < $image_count; $i++) {
+    $hero_background_images[] = get_theme_mod('hero_background_image_' . $i, get_template_directory_uri() . '/images/acores.jpg');
+}
+
 ?>
 
 <style>
@@ -22,7 +24,7 @@ $hero_background = [
 </style>
 
 <section class="hero">
-  <?php afficher_carrousel($hero_background); ?>
+  <?php afficher_carrousel($hero_background_images); ?>
 
   <div class="hero__contenu">
     <h1 class="hero__titre"><?php echo bloginfo('name') ?></h1>
@@ -37,5 +39,3 @@ $hero_background = [
     <a href="<?= $hero_bouton_lien ?>" class="hero__bouton"><?= $hero_bouton ?></a>
   </div>
 </section>
-
-<script src="wp-content\themes\33w-ete-25\script\carrousel.js"></script>

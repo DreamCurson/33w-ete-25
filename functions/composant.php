@@ -25,18 +25,21 @@ function afficher_erreur_404() {
 ?>
 
 <?php
-function afficher_carrousel($hero_background) {
-?>
-  <form class="carrousel__form">
-    <input type="radio" name="carrousel__radio" class="carrousel__radio" checked>
-    <input type="radio" name="carrousel__radio" class="carrousel__radio">
-    <input type="radio" name="carrousel__radio" class="carrousel__radio">
-  </form>
+function afficher_carrousel($background_images) {
+    if (!empty($background_images)) {
+        echo '<div class="hero__carrousel-container">';
+        
+        foreach ($background_images as $index => $image) {
+            echo '<div class="hero__carrousel carrousel" style="background-image: url(' . esc_url($image) . ');"></div>';
+        }
 
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[0]); ?>');"></div>
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[1]); ?>');"></div>
-  <div class="carrousel" style="background-image: url('<?php echo esc_url($hero_background[2]); ?>');"></div>
-<?php
+        echo '<div class="carrousel__form">';
+        foreach ($background_images as $index => $image) {
+            echo '<input type="radio" id="carrousel-radio-' . $index . '" name="carrousel-radio" class="carrousel__radio" ' . ($index === 0 ? 'checked' : '') . '>';
+        }
+        echo '</div>';
+        echo '</div>';
+    }
 }
 ?>
 
