@@ -105,6 +105,23 @@ function afficher_section_categorie($categorie) {
     <?php
 }
 
+function separation($width = '100%', $strokeWidth = 5, $color = 'blue', $bottomPadding = 5) {
+    $bottomPadding = (int)$bottomPadding;
+    $strokeWidth = (int)$strokeWidth;
+
+    $svgHeight = $strokeWidth + $bottomPadding;
+
+    echo '
+    <svg width="' . htmlspecialchars($width) . '" height="' . htmlspecialchars($svgHeight) . '" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="' . htmlspecialchars($strokeWidth / 2) . '" x2="' . htmlspecialchars($width) . '" y2="' . htmlspecialchars($strokeWidth / 2) . '" style="stroke:' . htmlspecialchars($color) . ';stroke-width:' . htmlspecialchars($strokeWidth) . '" />
+    </svg>';
+}
+
+
+
+
+
+
 
 
 ?>

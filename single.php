@@ -5,7 +5,9 @@
     <?php get_template_part('gabarit/populaire_seul'); ?>
   <?php endwhile; endif; ?>
 </section>
+<?php separation('100%', 5, '#d7efffff', 20); ?>
 
 <?php get_template_part('gabarit/galerie'); ?>
+<?php separation('100%', 5, '#ffffff', 20); ?>
 
 <?php get_footer(); ?>

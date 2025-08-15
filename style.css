@@ -250,7 +250,7 @@ body {
 }
 
 .galerie {
-  padding: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
 }
 .galerie__images {
   display: grid;
@@ -286,7 +286,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 2rem;
   background: #e0f2ff;
-  margin-bottom: 2rem;
 }
 .populaire__article {
   display: flex;
