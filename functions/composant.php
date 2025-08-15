@@ -4,7 +4,7 @@ function icone_sociaux($couleur)
     $couleur = substr($couleur, 1);
 ?>
 
-    <a class="sociaux" href="https://github.com/DreamCurson/33w-ete-25/tree/TP1_3" target="_blank" rel="noopener noreferrer">
+    <a class="sociaux" href="https://github.com/DreamCurson/33w-ete-25/tree/TP2" target="_blank" rel="noopener noreferrer">
         <img src="https://s2.svgbox.net/social.svg?ic=github&color=<?= $couleur ?>" width="32" height="32">
     </a>
     <a class="sociaux" href="#">
