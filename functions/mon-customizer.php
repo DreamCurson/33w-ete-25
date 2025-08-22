@@ -239,7 +239,6 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'erreur_404',
         'type' => 'text',
     ));
-    $erreur404_titre = get_theme_mod('erreur404_titre', 'Default Title');
 
     /* --- description --- */
     $wp_customize->add_setting('erreur404_description', array(
