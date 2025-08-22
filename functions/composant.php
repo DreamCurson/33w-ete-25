@@ -122,11 +122,22 @@ function separation($width = '100%', $strokeWidth = 5, $color = 'blue', $bottomP
     </svg>';
 }
 
-
-
-
-
-
+function get_search_form404() {
+    if (is_404()) {
+        ?>
+        <form class="erreur404__recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+            <label>
+                <input class="erreur404__recherche_input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+            </label>
+            <button class="erreur404__recherche_bouton" type="submit">
+                <span class="erreur404__recherche_icone">
+                    <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="20" height="20" alt="Rechercher" />
+                </span>
+            </button>
+        </form>
+        <?php
+    }
+}
 
 
 ?>

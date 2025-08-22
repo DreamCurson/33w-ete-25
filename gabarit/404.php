@@ -9,4 +9,7 @@
     </p>
 
     <a href="<?php echo home_url(); ?>">Retour à l'accueil</a>
+
+    <?php get_search_form404(); ?>
+
 </div>
