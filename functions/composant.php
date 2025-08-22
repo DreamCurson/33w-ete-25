@@ -14,7 +14,7 @@ function icone_sociaux($couleur)
 <?php } ?>
 
 <?php
-function afficher_erreur_404() {
+function afficher_erreur_404_ancien() {
 ?>
     <section class="erreur404">
         <h2 class="erreur404__texte">Nous ne savons pas où vous êtes, mais vous êtes loin de la destination attendue...</h2>
@@ -23,6 +23,8 @@ function afficher_erreur_404() {
 <?php
 }
 ?>
+
+
 
 <?php
 function afficher_carrousel($background_images) {

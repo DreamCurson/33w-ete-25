@@ -577,25 +577,6 @@ body {
   height: 40px;
 }
 
-.erreur404 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-  border-radius: 20px;
-  background-color: rgba(235, 238, 244, 0.3137254902);
-  box-shadow: 0 -4px 12px rgba(167, 207, 255, 0.7), 0 2px 12px rgba(167, 207, 255, 0.557);
-  box-sizing: border-box;
-}
-.erreur404__gif {
-  border-radius: 20px;
-  margin-bottom: 2rem;
-}
-.erreur404__texte {
-  color: #052978;
-  text-align: center;
-}
-
 .accordeon__chk {
   display: none;
 }
