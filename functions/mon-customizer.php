@@ -223,7 +223,101 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'piedpage_section',
     )));
 
-    
+    // Page 404 
+    $wp_customize->add_section('erreur_404', array(
+        'title' => __('Erreur 404', 'theme_31w'),
+        'priority' => 30,
+    ));
+
+    /* --- Titre --- */
+    $wp_customize->add_setting('erreur404_titre', array(
+        'default' => __('Oops, vous avez échoué sur l\'île 404 !', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('erreur404_titre', array(
+        'label' => __('Titre de la page', 'theme_31w'),
+        'section' => 'erreur_404',
+        'type' => 'text',
+    ));
+    $erreur404_titre = get_theme_mod('erreur404_titre', 'Default Title');
+
+    /* --- description --- */
+    $wp_customize->add_setting('erreur404_description', array(
+        'default' => __('Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur \'Accueil\' pour découvrir à nouveau nos voyages d\’exception !', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('erreur404_description', array(
+        'label' => __('Description de la page', 'theme_31w'),
+        'section' => 'erreur_404',
+        'type' => 'text',
+    ));
+
+    /* --- Couleur Textes --- */
+    $wp_customize->add_setting('erreur404_couleur_texte', array(
+        'default' => '#ffb300ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_texte', array(
+        'label' => __('Couleur du texte', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
+    /* --- Couleur bouton accueil --- */
+    $wp_customize->add_setting('erreur404_couleur_bouton_accueil', array(
+        'default' => '#ffe100ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_bouton_accueil', array(
+        'label' => __('Couleur du bouton d\'accueil', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
+    /* --- Couleur texte bouton accueil --- */
+    $wp_customize->add_setting('erreur404_couleur_texte_accueil', array(
+        'default' => '#111111ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_texte_accueil', array(
+        'label' => __('Couleur du texte du bouton d\'accueil', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
+    /* --- Couleur bouton destinations --- */
+    $wp_customize->add_setting('erreur404_couleur_bouton_destination', array(
+        'default' => '#ffe100ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_bouton_destination', array(
+        'label' => __('Couleur des boutons de destination', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
+    /* --- Couleur texte boutons destination --- */
+    $wp_customize->add_setting('erreur404_couleur_texte_destination', array(
+        'default' => '#111111ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_texte_destination', array(
+        'label' => __('Couleur du texte des bouton de destination', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
+    /* --- Couleur recherche --- */
+    $wp_customize->add_setting('erreur404_couleur_recherche', array(
+        'default' => '#ffe100ff',
+        'sanitize_callback' => 'sanitize_hex_color', 
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur404_couleur_recherche', array(
+        'label' => __('Couleur de la recherche', 'theme_31w'),
+        'section' => 'erreur_404',
+    )));
+
 }
 
 add_action('customize_register', 'theme_31w_customize_register');

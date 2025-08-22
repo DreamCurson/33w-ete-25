@@ -488,7 +488,6 @@ body {
 .erreur404__textes {
   text-align: center;
   max-width: 90ch;
-  color: #ffb300;
 }
 .erreur404__titre {
   margin-top: 100px;
@@ -503,7 +502,6 @@ body {
   font-weight: 500;
   padding: 10px;
   border-radius: 5px;
-  background-color: yellow;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -511,7 +509,6 @@ body {
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  background-color: yellow;
   transition: all 0.3s ease;
 }
 .erreur404__accueil:hover, .erreur404__button:hover {
@@ -533,11 +530,8 @@ body {
   padding: 4px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid yellow;
-  color: yellow;
 }
 .erreur404__recherche_input::placeholder {
-  color: yellow;
   padding-left: 5px;
 }
 @media screen and (max-width: 654px) {
